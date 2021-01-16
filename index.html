@@ -13,6 +13,7 @@
         <ul>
             <li><a href='#'>Home</a></li>
             <li><a href='#/About'>About</a></li>
+            <li><input type="search" > <input type="button" value="Search"></li>
         </ul>
     </nav>
 
@@ -81,6 +82,43 @@
                         <option>Fish</option>
                     </optgroup>
                 </select>
+
+                <fieldset>
+                    <legend>Choose your favorite lower div CS class</legend>
+                    <input type="radio" name="lowerdiv">
+                    <label>CSE 8/11</label><br>
+                    <input type="radio" name="lowerdiv">
+                    <label>CSE 12</label><br>
+                    <input type="radio" name="lowerdiv">
+                    <label>CSE 30</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Favorite foods?:</legend>
+                    <input type="checkbox" name="">
+                    <label>Pizza</label><br>
+                    <input type="checkbox" name="">
+                    <label>Icecream</label><br>
+                    <input type="text" name="">
+                </fieldset>
+                <input type="hidden" value="secret">
+                <label>How happy are you?</label>
+                <input type="range"><br>
+
+                <label>Favorite color:</label>
+                <input type="color"><br>
+
+                <input type="date"><br>
+                <input type="time"><br>
+
+                <label>Day or night?:</label>
+                <input list="daynight">
+                <datalist id="daynight">
+                    <option value="Day"></option>
+                    <option value="Night"></option>
+                </datalist>
+                
+                <input type="submit" value="Submit">
             </form>
 
             <table>
@@ -110,9 +148,24 @@
                         <td>CSE 132A</td>
                         <td>4 Units</td>
                     </tr>
+                    
                 </tbody>
+                <template id="extraRow">
+                    <tr>
+                        <td id="clubs"></td>
+                        <td></td>
+                    </tr>
+                </template>
                 <caption>Not sure if I am gonna drop 130 or 132A</caption>
             </table>
+
+            <canvas width="100" height="100">
+                Canvas placeholder
+            </canvas>
+
+            <svg stroke="black" fill="green">
+                <circle cx="50" cy="50" r="25"/>
+            </svg>
         </section>
 
         <button>I don't do anything, do NOT press</button>
@@ -125,6 +178,8 @@
     <footer>
         <div>
             Footer
+            <label for="feedback">Leave feedback</label>
+            <textarea id="feedback" name="feedback"></textarea>
             <pre>
                  ________  ________  ________  ___  ___  ________  ________      ___    ___      ________  ___  ___  ________  ________      
                 |\_____  \|\   __  \|\   ____\|\  \|\  \|\   __  \|\   __  \    |\  \  /  /|    |\   ____\|\  \|\  \|\   __  \|\   ___  \    
