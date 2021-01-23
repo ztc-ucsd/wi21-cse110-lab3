@@ -5,183 +5,198 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="author" content="Zachary Chan">
 </head>
+<style>
+    body{
+        background-color: slategray;
+    }
+</style>
 <body>
     <header>
         <h1><b>Zachary Chan's Webpage</b></h1>
     </header>
 
     <nav id="navbar">
-        <ul>
-            <li><a href='#'>Home</a></li>
-            <li><a href='#/About'>About</a></li>
-            <li><input type="search" > <input type="button" value="Search"></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href='#'>Home</a></li>
+                <li><a href='#/About'>About</a></li>
+                <li><input type="search" > <input type="button" value="Search"></li>
+            </ul>
+        </div>
     </nav>
 
     <hr>
     
     <main>
         <section id="text">
-            <div>
-                <h2><i>This is a <em>basic</em> page about <strong>Zachary Chan.</strong></i></h2>
-                <h3>You can learn some stuff here.</h3>
-                <p>I am a transfer student at <span class="College">UCSD</span> studying CS.<br>
-                    If everything goes well, this will be my final year at UCSD.
-                </p>
+            <div class="container">
+                <div class="main-text">
+                    <h2><i>This is a <em>basic</em> page about <strong>Zachary Chan.</strong></i></h2>
+                    <h3>You can learn some stuff here.</h3>
+                    <p style="color:orange">I am a transfer student at <span class="College">UCSD</span> studying CS.<br>
+                        If everything goes well, this will be my final year at UCSD.
+                    </p>
+                </div>
+
+                <div class="second-text">
+                    <h3>Movies I really enjoy</h3>
+                    <ol>
+                        <li>The Dark Knight</li>
+                        <li>Whiplash</li>
+                        <li>Parasite</li>
+                    </ol>
+                </div>
+
+                <div class="idk">
+                    <details>
+                        <summary>My favorite TV Show</summary>
+                        Mr. Robot
+                    </details>
+                </div>
             </div>
 
-            <div>
-                Movies I really enjoy
-                <ol>
-                    <li>The Dark Knight</li>
-                    <li>Whiplash</li>
-                    <li>Parasite</li>
-                </ol>
-            </div>
+            <div class="wrapper">
+                <div>
+                    <figure id="curry_shooting">
+                        <img src="curry_shooting.jpg" width=192 height=108>
+                        <figcaption>I enjoy watching and playing basketball</figcaption>
+                    </figure>
 
-            <details>
-                <summary>My favorite TV Show</summary>
-                Mr. Robot
-            </details>
+                    <picture>
+                        <img src="geisel-hr.jpg" width=210 height=140 alt="Geisel at UCSD">
+                    </picture>
 
-            <figure>
-                <img src="curry_shooting.jpg" width=192 height=108>
-                <figcaption>I enjoy watching and playing basketball</figcaption>
-            </figure>
+                    <iframe
+                        title="Inline Frame"
+                        width="300"
+                        height="200"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004007949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+                    </iframe>
+                    <figure>
+                        <figcaption>My favorite animal:</figcaption>
+                        <audio controls src="DogWoof.mp3"></audio>
+                    </figure>   
+                </div>
 
-            <picture>
-                <img src="geisel-hr.jpg" width=210 height=140 alt="Geisel at UCSD">
-            </picture>
+                <div class="inner">
+                    <video controls
+                        width="250"
+                        height="200">
+                        <source src="FallingSnow.mov">
+                    </video>
 
-            <iframe
-                title="Inline Frame"
-                width="300"
-                height="200"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004007949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
-            </iframe>
-            <figure>
-                <figcaption>My favorite animal:</figcaption>
-                <audio controls src="DogWoof.mp3"></audio>
-            </figure>   
+                    <p>Printing in java is simple just use <code>System.out.println();</code></p>
 
-            <video controls
-                width="250"
-                height="200">
-                <source src="FallingSnow.mov">
-            </video>
+                    <form class="form">
+                        <label>Which animal do you perfer?:</label>
+                        <select>
+                            <optgroup label="4 legs">
+                                <option>Cat</option>
+                                <option>Dog</option>
+                            </optgroup>
+                            <optgroup label="No legs">
+                                <option>Fish</option>
+                            </optgroup>
+                        </select>
 
-            <p>Printing in java is simple just use <code>System.out.println();</code></p>
+                        <fieldset>
+                            <legend>Choose your favorite lower div CS class</legend>
+                            <input type="radio" name="lowerdiv">
+                            <label>CSE 8/11</label><br>
+                            <input type="radio" name="lowerdiv">
+                            <label>CSE 12</label><br>
+                            <input type="radio" name="lowerdiv">
+                            <label>CSE 30</label><br>
+                        </fieldset>
 
-            <form>
-                <label>Which animal do you perfer?:</label>
-                <select>
-                    <optgroup label="4 legs">
-                        <option>Cat</option>
-                        <option>Dog</option>
-                    </optgroup>
-                    <optgroup label="No legs">
-                        <option>Fish</option>
-                    </optgroup>
-                </select>
+                        <fieldset>
+                            <legend>Favorite foods?:</legend>
+                            <input type="checkbox">
+                            <label>Pizza</label><br>
+                            <input type="checkbox">
+                            <label>Icecream</label><br>
+                            <input type="text">
+                        </fieldset>
+                        <input type="hidden" value="secret">
+                        <label>How happy are you?</label>
+                        <input type="range"><br>
 
-                <fieldset>
-                    <legend>Choose your favorite lower div CS class</legend>
-                    <input type="radio" name="lowerdiv">
-                    <label>CSE 8/11</label><br>
-                    <input type="radio" name="lowerdiv">
-                    <label>CSE 12</label><br>
-                    <input type="radio" name="lowerdiv">
-                    <label>CSE 30</label><br>
-                </fieldset>
+                        <label>Favorite color:</label>
+                        <input type="color"><br>
 
-                <fieldset>
-                    <legend>Favorite foods?:</legend>
-                    <input type="checkbox">
-                    <label>Pizza</label><br>
-                    <input type="checkbox">
-                    <label>Icecream</label><br>
-                    <input type="text">
-                </fieldset>
-                <input type="hidden" value="secret">
-                <label>How happy are you?</label>
-                <input type="range"><br>
+                        <input type="date"><br>
+                        <input type="time"><br>
 
-                <label>Favorite color:</label>
-                <input type="color"><br>
+                        <label>Day or night?:</label>
+                        <input list="daynight">
+                        <datalist id="daynight">
+                            <option value="Day"></option>
+                            <option value="Night"></option>
+                        </datalist>
+                        <br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
 
-                <input type="date"><br>
-                <input type="time"><br>
-
-                <label>Day or night?:</label>
-                <input list="daynight">
-                <datalist id="daynight">
-                    <option value="Day"></option>
-                    <option value="Night"></option>
-                </datalist>
-                
-                <input type="submit" value="Submit">
-            </form>
-
-            <table>
-                
-                <caption>Not sure if I am gonna drop 130 or 132A</caption>
-                <colgroup>
-                    <col>
-                    <col>
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th colspan="2">Winter 2021</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>CSE 101</td>
-                        <td>4 Units</td>
-                    </tr>
-                    <tr>
-                        <td>CSE 110</td>
-                        <td>4 Units</td>
-                    </tr>
-                    <tr>
-                        <td>CSE 130</td>
-                        <td>4 Units</td>
-                    </tr>
-                    <tr>
-                        <td>CSE 132A</td>
-                        <td>4 Units</td>
-                    </tr>
+                <table>
                     
-                </tbody>
-                <template id="extraRow">
-                    <tr>
-                        <td id="clubs"></td>
-                        <td></td>
-                    </tr>
-                </template>
-            </table>
+                    <caption>Classes</caption>
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Winter 2021</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CSE 101</td>
+                            <td>4 Units</td>
+                        </tr>
+                        <tr>
+                            <td>CSE 110</td>
+                            <td>4 Units</td>
+                        </tr>
+                        <tr>
+                            <td>CSE 130</td>
+                            <td>4 Units</td>
+                        </tr>
+                        
+                    </tbody>
+                    <template id="extraRow">
+                        <tr>
+                            <td id="clubs"></td>
+                            <td></td>
+                        </tr>
+                    </template>
+                </table>
 
-            <canvas width="100" height="100">
-                Canvas placeholder
-            </canvas>
+                <canvas width="100" height="100">
+                    Canvas placeholder
+                </canvas>
 
-            <svg stroke="black" fill="green">
-                <circle cx="50" cy="50" r="25"/>
-            </svg>
-        </section>
+                <svg stroke="black" fill="green">
+                    <circle cx="50" cy="50" r="25"/>
+                </svg>
+            </section>
 
-        <button>I don't do anything, do NOT press</button>
+            <button>I don't do anything, do NOT press</button>
 
-        <aside>
-            <p>An aside</p>
-        </aside>
+            <aside>
+                <p>An aside</p>
+            </aside>
+        </div>
     </main>
 
-    <footer>
-        <div>
-            Footer
+    <footer id="footer">
+        <div class="container">
+            <p>Footer</p>
             <label for="feedback">Leave feedback</label>
+        </div>
             <textarea id="feedback" name="feedback"></textarea>
+        <div class="container">
             <pre>
                  ________  ________  ________  ___  ___  ________  ________      ___    ___      ________  ___  ___  ________  ________      
                 |\_____  \|\   __  \|\   ____\|\  \|\  \|\   __  \|\   __  \    |\  \  /  /|    |\   ____\|\  \|\  \|\   __  \|\   ___  \    
