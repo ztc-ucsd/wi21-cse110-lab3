@@ -17,7 +17,8 @@
 .wrapper {
     display:grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-auto-rows: minmax(75px, auto);
+    grid-auto-rows: minmax(75pt, auto);
+    grid-auto-columns: minmax(10pt, auto);
 }
 
 .wrapper > div{
@@ -43,9 +44,11 @@
 .idk{
     flex: 1;
     order: 2;
+    position: absolute;
 }
 
 .form{
+    position:static
     font-size: 12px;
 }
 
@@ -90,11 +93,12 @@ a:active{
  }
 
  div + h2{
+     display:block;
      color:red;
      margin-top:0;
      margin-bottom:0;
-     margin-left: 0;
-     margin-right:0;
+     margin-left: 1pc;
+     margin-right:1pc;
  }
 
  div ~ p{
@@ -113,5 +117,11 @@ a:active{
  h1, h2, h3{
      height:auto;
      width:auto;
-     margin: 0 0 0 0;
+     margin: 1ch 1ch 0 0;
  }
+
+ @media only screen and (max-width: 600px) {
+    body {
+      background-color: red;
+    }
+  }
